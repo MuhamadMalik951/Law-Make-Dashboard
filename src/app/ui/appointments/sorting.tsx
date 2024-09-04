@@ -4,23 +4,27 @@ export const sortItems = (
     name: string;
     location: { city: string; area: string };
     img: string;
-    to: { time: string; date: any };
-    from: { time: string; date: any };
+    to: { time: string; date: string };
+    from: { time: string; date: string };
     service: string;
     status: string;
   }>
-) =>
-  [...array].sort((a, b) => {
+) => {
+  return [...array].sort((a, b) => {
     if (sort.toLowerCase() === 'name-asc') {
       return a.name.localeCompare(b.name);
     } else if (sort.toLowerCase() === 'name-desc') {
       return b.name.localeCompare(a.name);
     } else if (sort.toLowerCase() === 'date-asc') {
-      return array.sort((a, b) => new Date(a.from.date) - new Date(b.to.date));
+      return new Date(a.from.date).getTime() - new Date(b.from.date).getTime();
     } else if (sort.toLowerCase() === 'date-desc') {
-      return array.sort((a, b) => new Date(a.from.date) - new Date(b.to.date));
-    } else return array;
+      return new Date(b.from.date).getTime() - new Date(a.from.date).getTime();
+    } else {
+      return 0; 
+    }
   });
+};
+
 
 export const filterItems = (
   status: string,

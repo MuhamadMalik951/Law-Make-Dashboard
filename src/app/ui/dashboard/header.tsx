@@ -10,9 +10,9 @@ export default function Header() {
           </div>
           <div className="text-xs font-bold">Your Parnter In Justice</div>
         </div>
-        <div className="flex-none">
+        <div className="flex gap-2">
           <div className="dropdown dropdown-end">
-            <div className="text-sm">Mr Hrais Irfan</div>
+            <div className="text-sm mb-3">Mr Hrais Irfan</div>
           </div>
           <div className="dropdown dropdown-end">
             <div
@@ -20,9 +20,12 @@ export default function Header() {
               role="button"
               className="btn btn-ghost btn-circle avatar"
             >
-              <div className="w-10 rounded-full">
+              <div className="w-12 rounded-full btn btn-circle avatar rounded-full rounded-box">
                 <Image
-                  src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-lawyer-male-profession-vitaliy-gorbachev-lineal-color-vitaly-gorbachev-1.png"
+                  className="roundeed-full"
+                  width={500}
+                  height={500}
+                  src="https://img.daisyui.com/images/profile/demo/2@94.webp"
                   alt="external-lawyer-male-profession-vitaliy-gorbachev-lineal-color-vitaly-gorbachev-1"
                 />
               </div>
