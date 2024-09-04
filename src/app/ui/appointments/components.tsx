@@ -118,7 +118,7 @@ export function TableDataEntry({
   );
 }
 
-export function SortBy({ selectedOption, handleChange }) {
+export function SortBy({ selectedOption, handleChange }: {selectedOption: string,  handleChange: React.ChangeEventHandler<HTMLSelectElement>}) {
   return (
     <>
       <div>
@@ -146,7 +146,7 @@ export function SortBy({ selectedOption, handleChange }) {
   );
 }
 
-export function TypeSelect({ selecter, handleChanger }) {
+export function TypeSelect({ selecter, handleChanger }: {selecter: string, handleChanger: React.ChangeEventHandler<HTMLSelectElement>}) {
   return (
     <>
       <div>
