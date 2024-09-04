@@ -12,6 +12,33 @@ export function MenuIcon({
   icon,
 }: {
   statement: string;
+  price: number;
+  icon: React.ReactNode;
+}) {
+  return (
+    <>
+      <ul className="menu menu-sm bg-white rounded-box w-full flex flex-row align-middle justify-center m-auto md:w-64 ">
+        {/* <ul className="flex gap-2 menu-sm rounded-box w-full bg-white text-center"> */}
+        {/* <ul className="flex gap-2 menu-sm rounded-box w-full bg-white text-center"> */}
+        {icon}
+        <div className="flex flex-col flex-grow">
+          <li>
+            <div className="truncate">{statement}</div>
+          </li>
+          <li>
+            <div className="text-black font-bold">{price}</div>
+          </li>
+        </div>
+      </ul>
+    </>
+  );
+}
+export function Earning({
+  statement,
+  price,
+  icon,
+}: {
+  statement: string;
   price: string;
   icon: React.ReactNode;
 }) {
