@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Header() {
   return (
     <>
-      <div className="navbar  bg-white text-black flex justify-between">
+      <div className="navbar  bg-white text-black flex justify-between hidden md:flex">
         <div className="flex flex-col m-3">
           <div className="text-3xl font-extrabold">
             Law <span className="text-cyan-500">Mate</span>
