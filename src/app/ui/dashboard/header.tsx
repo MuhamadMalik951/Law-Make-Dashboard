@@ -1,10 +1,13 @@
+import Image from 'next/image';
 
 export default function Header() {
   return (
     <>
       <div className="navbar h-8 bg-white text-black flex justify-between">
         <div className="flex flex-col m-3">
-          <div className="text-3xl font-extrabold">Law <span className="text-cyan-500">Mate</span></div>
+          <div className="text-3xl font-extrabold">
+            Law <span className="text-cyan-500">Mate</span>
+          </div>
           <div className="text-xs font-bold">Your Parnter In Justice</div>
         </div>
         <div className="flex-none">
@@ -18,9 +21,7 @@ export default function Header() {
               className="btn btn-ghost btn-circle avatar"
             >
               <div className="w-10 rounded-full">
-                <img
-                  width="60"
-                  height="60"
+                <Image
                   src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/external-lawyer-male-profession-vitaliy-gorbachev-lineal-color-vitaly-gorbachev-1.png"
                   alt="external-lawyer-male-profession-vitaliy-gorbachev-lineal-color-vitaly-gorbachev-1"
                 />

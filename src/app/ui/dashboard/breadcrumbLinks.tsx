@@ -3,9 +3,15 @@ import { usePathname } from 'next/navigation';
 import { links } from '@/app/ui/dashboard/nav-links';
 import Link from 'next/link';
 
+interface Crumb {
+  name: string;
+  href: string;
+}
+
+
 export function BreadLinks() {
   const path = usePathname();
-  const crumbs: Array<object> = [{ name: 'Dashboard', href: '/dashboard' }];
+  const crumbs: Crumb[] = [{ name: 'Dashboard', href: '/dashboard' }];
   links.map((link, set) => {
     if (link.href === path) {
       if (link.href === '/dashboard') {
@@ -15,8 +21,8 @@ export function BreadLinks() {
     }
   });
 
-  return crumbs.map((crumb) => (
-    <li >
+  return crumbs.map((crumb, index) => (
+    <li key={index}>
       <Link href={crumb.href}>{crumb.name}</Link>
     </li>
   ));
