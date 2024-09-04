@@ -3,7 +3,7 @@ import { PowerIcon } from '@heroicons/react/24/outline';
 import MobileSideNav from './mobilesidenav';
 export default function SideNav() {
   return (
-    <div className="flex h-10 text-black  flex-col px-3 py-4 md:px-2 bg-white md:bg-transparent">
+    <div className="flex h-20 text-black  flex-col px-3 py-4 md:px-2 bg-white md:bg-transparent">
       <MobileSideNav />
       <div className="flex flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2 hidden md:flex">
         <NavLinks />
