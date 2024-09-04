@@ -1,14 +1,17 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   return (
     <>
-      <div className="navbar  bg-white text-black flex justify-between hidden md:flex">
+      <div className="navbar bg-white text-black flex justify-between hidden md:flex">
         <div className="flex flex-col m-3">
-          <div className="text-3xl font-extrabold">
-            Law <span className="text-cyan-500">Mate</span>
-          </div>
-          <div className="text-xs font-bold">Your Parnter In Justice</div>
+          <Link href="/" className='flex flex-col m-3'>
+            <div className="text-3xl font-extrabold">
+              Law <span className="text-cyan-500">Mate</span>
+            </div>
+            <div className="text-xs font-bold">Your Parnter In Justice</div>
+          </Link>
         </div>
         <div className="flex gap-3">
           <div className="text flex  flex-col hidden md:flex">
@@ -37,10 +40,10 @@ export default function Header() {
               className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-16 w-52 p-2 shadow"
             >
               <li>
-                <a className="justify-between">
+                <Link href={'/dashboard/myprofile'} className="justify-between">
                   Profile
                   <span className="badge bg-white text-black">New</span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a>Settings</a>
