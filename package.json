@@ -9,18 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "clsx": "^2.1.1",
+    "daisyui": "^4.12.10",
+    "heroicons": "^2.1.5",
+    "lodash.sortby": "^4.7.0",
+    "next": "14.2.7",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.7"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/lodash.sortby": "^4.7.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.7"
+    "typescript": "^5"
   }
 }
