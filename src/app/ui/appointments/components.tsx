@@ -118,7 +118,13 @@ export function TableDataEntry({
   );
 }
 
-export function SortBy({ selectedOption, handleChange }: {selectedOption: string,  handleChange: React.ChangeEventHandler<HTMLSelectElement>}) {
+export function SortBy({
+  selectedOption,
+  handleChange,
+}: {
+  selectedOption: string;
+  handleChange: React.ChangeEventHandler<HTMLSelectElement>;
+}) {
   return (
     <>
       <div>
@@ -146,14 +152,21 @@ export function SortBy({ selectedOption, handleChange }: {selectedOption: string
   );
 }
 
-export function TypeSelect({ selecter, handleChanger }: {selecter: string, handleChanger: React.ChangeEventHandler<HTMLSelectElement>}) {
+export function TypeSelect({
+  selecter,
+  handleChanger,
+}: {
+  selecter: string;
+  handleChanger: React.ChangeEventHandler<HTMLSelectElement>;
+}) {
   return (
     <>
       <div>
-        <select 
-        onChange={handleChanger}
-        value={selecter}
-        className="select font-semibold w-full max-w-xs bg-white">
+        <select
+          onChange={handleChanger}
+          value={selecter}
+          className="select font-semibold w-full max-w-xs bg-white"
+        >
           <option disabled className="font-semibold">
             Select Type
           </option>
@@ -184,9 +197,7 @@ export function Table() {
     sortItems(selectedOption, clients)
   );
   const [selectedOptioner, setSelectedOptioner] = useState('completed');
-  const [sorted, setSorted] = useState(
-    sortItems(selectedOptioner, clients)
-  );
+  const [sorted, setSorted] = useState(sortItems(selectedOptioner, clients));
 
   const handleChange = (event: any) => {
     const option = event.target.value;
@@ -208,7 +219,10 @@ export function Table() {
         </div>
         <div className="flex gap-5 mt-4 mt-2:md">
           <SortBy selectedOption={selectedOption} handleChange={handleChange} />
-          <TypeSelect selecter={selectedOptioner} handleChanger={handleChanger} />
+          <TypeSelect
+            selecter={selectedOptioner}
+            handleChanger={handleChanger}
+          />
         </div>
       </div>
 
