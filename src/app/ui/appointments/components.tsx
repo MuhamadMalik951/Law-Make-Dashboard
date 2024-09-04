@@ -113,6 +113,36 @@ export function TableDataEntry({
             {client.status.toUpperCase()}
           </button>
         </th>
+        <th>
+          <div className="dropdown dropdown-top dropdown-end">
+            <button className="btn btn-square btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="inline-block h-5 w-5 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
+                ></path>
+              </svg>
+            </button>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu bg-white rounded-box z-[1] w-52 p-2 shadow z-100"
+            >
+              <li>
+                <a>Delete</a>
+              </li>
+              <li>
+                <a>Details</a>
+              </li>
+            </ul>
+          </div>
+        </th>
       </tr>
     </>
   );
